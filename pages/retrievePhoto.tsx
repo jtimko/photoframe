@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next'
+import { GetServerSideProps } from 'next'
 import React from 'react'
 
 const retrievePhoto = () => {
@@ -9,9 +9,9 @@ const retrievePhoto = () => {
 
 export default retrievePhoto
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext | undefined) {
-    const data = ctx?.req;
+export const getServerSideProps: GetServerSideProps = async ({req}) => {
 
+    const data = req
     console.log(JSON.stringify(data));
     return {
         props: {
