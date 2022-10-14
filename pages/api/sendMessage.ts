@@ -12,4 +12,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         from: '+16025608679',
         to: '+17077598901'
     });
+
+    res.status(200)
 }  
