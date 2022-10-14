@@ -6,4 +6,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const token = process.env.TWILIO_AUTH_TOKEN;
 
     const client = twilio(accountSid, token);
+
+    const {body} = req.body;
+
+    console.log(JSON.stringify(body));
 }
