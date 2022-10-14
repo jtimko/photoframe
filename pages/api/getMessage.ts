@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const client = twilio(accountSid, token);
 
-    const {body} = req.body;
+    const data = req.body;
 
-    console.log(JSON.stringify(body));
+    console.log(JSON.stringify(data));
 }
