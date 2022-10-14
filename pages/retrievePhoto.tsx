@@ -1,3 +1,4 @@
+import { GetServerSidePropsContext } from 'next'
 import React from 'react'
 
 const retrievePhoto = () => {
@@ -7,3 +8,14 @@ const retrievePhoto = () => {
 }
 
 export default retrievePhoto
+
+export async function getServerSideProps(ctx: GetServerSidePropsContext | undefined) {
+    const data = ctx?.req;
+
+    console.log(JSON.stringify(data));
+    return {
+        props: {
+            
+        }
+    }
+}
