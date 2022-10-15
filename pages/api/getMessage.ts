@@ -9,8 +9,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const data = req.body;
 
-    console.log(JSON.stringify(data.MediaContentType0));
-    if (data.MediaContentType0 == "image/jpg") {
-        console.log("Yes!");
+    const supportedMimes = ["image/jpeg", "image/jpg", "image/png"];
+
+    if (data.MediaContentType0 && supportedMimes.includes(data.MediaContentType0)) {
+        console.log("True");
+    } else {
+        console.log("Nope");
     }
 }
