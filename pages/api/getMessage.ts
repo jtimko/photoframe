@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const data = req.body;
 
-    console.log(JSON.stringify(data));
+    console.log(JSON.stringify(data.MediaContentType0));
     if (data.MediaContentType0 == "image/jpg") {
         console.log("Yes!");
     }
