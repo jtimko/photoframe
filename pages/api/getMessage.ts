@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (data.MediaContentType0 && supportedMimes.includes(data.MediaContentType0)) {
         const file = await fetch(data.MediaUrl0);
-        console.log(JSON.stringify(file.blob));
+        console.log(JSON.stringify(file));
         // const image = readFileSync(file.);
         // writeFileSync('../../public/', image);
 
