@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const supportedMimes = ["image/jpeg", "image/jpg", "image/png"];
 
     if (data.MediaContentType0 && supportedMimes.includes(data.MediaContentType0)) {
-        const file = await fetch(data.MediaUrl0);
+        const file = await fetch(data);
         console.log(JSON.stringify(file));
         // const image = readFileSync(file.);
         // writeFileSync('../../public/', image);
